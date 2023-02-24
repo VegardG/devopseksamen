@@ -1,6 +1,6 @@
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build-and-test:
@@ -8,9 +8,5 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run:
-      - name: Build code
-        run: mvn spring-boot:run
       - name: Run tests
         run: mvn test
