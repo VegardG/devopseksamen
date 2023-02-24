@@ -1,6 +1,8 @@
+name: build-and-test
+
 on:
   pull_request:
-    branches: [main]
+    branches: [ master ]
 
 jobs:
   build-and-test:
@@ -9,6 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build code
-        run: mvn spring-boot:run
+        run: mvn -B package --file pom.xml
       - name: Run tests
-        run: mvn test
+        run: mvn test --file pom.xml
