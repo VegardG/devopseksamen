@@ -8,6 +8,6 @@ public class BakemyDayApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BakemyDayApplication.class, args);
-	}
+	}asd
 
 }
